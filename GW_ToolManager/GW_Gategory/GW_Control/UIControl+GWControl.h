@@ -7,8 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-// 创建block
+/**
+ 创建block
+
+ @param control 触发对象
+ */
 typedef void (^ActionBlock)(__kindof __weak UIControl *control);
 @interface UIControl (GWControl)
+
+/**
+ 添加响应事件
+
+ @param controlEvents UIControlEvents类型
+ @param actionBlock 响应回调
+ */
 - (void)GW_addEvents:(UIControlEvents)controlEvents actionBlock:(ActionBlock)actionBlock;
 @end
