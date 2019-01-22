@@ -27,16 +27,18 @@
     btn.backgroundColor = [UIColor redColor];
     [btn setTitle:@"jump" forState:UIControlStateNormal];
     [self.view addSubview:btn];
-    [btn GW_addEvents:UIControlEventTouchUpInside actionBlock:^(UIButton *__weak control) {
+    [btn GW_addEvents:UIControlEventTouchUpInside actionBlock:^(UIButton *control) {
         [self.navigationController pushViewController:[TestKVOVC new] animated:YES];
     }];
+    
+    
     
     UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
     btn2.frame = CGRectMake(50, 200, 200, 30);
     btn2.backgroundColor = [UIColor redColor];
     [btn2 setTitle:@"jump2" forState:UIControlStateNormal];
     [self.view addSubview:btn2];
-    [btn2 GW_addEvents:UIControlEventTouchUpInside actionBlock:^(UIButton *__weak control) {
+    [btn2 GW_addEvents:UIControlEventTouchUpInside actionBlock:^(UIButton *control) {
         [self.navigationController pushViewController:[TestControlVC new] animated:YES];
     }];
 }

@@ -29,19 +29,21 @@
     [btn1 setTitle:@"hehe" forState:UIControlStateNormal];
     [self.view addSubview:btn1];
     //    支持响应多次加载时间
-    [btn1 GW_addEvents:UIControlEventTouchUpInside actionBlock:^(UIButton *__weak control) {
+    [btn1 GW_addEvents:UIControlEventTouchUpInside actionBlock:^(UIButton *control) {
         NSLog(@"111");
     }];
-    [btn1 GW_addEvents:UIControlEventTouchUpInside actionBlock:^(UIButton *__weak control) {
+    [btn1 GW_addEvents:UIControlEventTouchUpInside actionBlock:^(UIButton *control) {
+        [control setTitle:@"222" forState:UIControlStateNormal];
         NSLog(@"222");
     }];
     
     //    同时支持多种手势
-    [btn1 GW_addEvents:UIControlEventTouchUpOutside actionBlock:^(UIButton *__weak control) {
+    [btn1 GW_addEvents:UIControlEventTouchUpOutside actionBlock:^(UIButton *control) {
         NSLog(@"333");
     }];
     
-    [btn1 GW_addEvents:UIControlEventTouchDown actionBlock:^(UIButton *__weak control) {
+    [btn1 GW_addEvents:UIControlEventTouchDown actionBlock:^(UIButton *control) {
+        [control setTitle:@"444" forState:UIControlStateNormal];
         NSLog(@"444");
     }];
 }

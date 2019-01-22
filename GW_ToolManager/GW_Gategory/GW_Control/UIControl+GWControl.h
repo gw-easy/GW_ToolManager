@@ -12,7 +12,7 @@
 
  @param control 触发对象
  */
-typedef void (^ActionBlock)(__kindof __weak UIControl *control);
+typedef void (^ActionBlock)(__kindof UIControl *control);
 @interface UIControl (GWControl)
 
 /**
